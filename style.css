@@ -201,6 +201,51 @@ i {
     color: var(--text-secondary);
 }
 
+.skill-group + .skill-group {
+    margin-top: 12px;
+}
+
+.skill-group-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.skill-group-title i {
+    width: auto;
+    margin-right: 0;
+    color: var(--accent);
+}
+
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border: 1px solid var(--line-soft);
+    border-radius: 999px;
+    background: var(--surface-strong);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.skill-chip i {
+    width: auto;
+    margin-right: 0;
+    color: var(--accent);
+}
+
 .profile-photo {
     width: 98px;
     margin: 2px 0 13px;
@@ -265,6 +310,11 @@ i {
 
     .subtitle {
         font-size: 0.92rem;
+    }
+
+    .skill-chip {
+        padding: 4px 9px;
+        font-size: 0.78rem;
     }
 }
 
