@@ -1,82 +1,256 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+:root {
+    --bg-start: #eef4f9;
+    --bg-mid: #f5f8fb;
+    --bg-end: #edf3ee;
+    --paper: #ffffff;
+    --ink: #1d2738;
+    --muted: #5b687c;
+    --line: #d7dee8;
+    --accent: #0f766e;
+    --accent-soft: #d8f0ed;
+    --link: #0b5f87;
+    --radius-lg: 18px;
+    --radius-md: 14px;
+    --shadow-lg: 0 20px 45px rgba(14, 30, 37, 0.12);
+    --shadow-sm: 0 8px 22px rgba(17, 24, 39, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-    max-width: 960px;
-    /* 최대 너비 */
-    margin: auto;
-    /* 마진 auto - 내용을 화면 가운데 맞추기 위해  */
-    font-family: "Noto Sans KR", "Nanum Gothic";
-    /* 글꼴 - 웹 폰트 */
+    margin: 0;
+    padding: 42px 20px 56px;
+    color: var(--ink);
+    font-family: "Sora", "Noto Sans KR", sans-serif;
     font-size: 14px;
-    /* 글자 크기 */
+    line-height: 1.65;
+    background:
+        radial-gradient(circle at 10% 16%, rgba(15, 118, 110, 0.22), transparent 32%),
+        radial-gradient(circle at 90% 8%, rgba(11, 95, 135, 0.16), transparent 34%),
+        linear-gradient(155deg, var(--bg-start) 0%, var(--bg-mid) 42%, var(--bg-end) 100%);
+    min-height: 100vh;
+}
+
+#header,
+main {
+    width: min(1080px, 100%);
+    margin: 0 auto;
+}
+
+#header {
+    position: relative;
+    padding: 30px 36px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+#header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), transparent);
 }
 
 h1 {
-    font-size: 3rem;
-    /* 글자 크기 */
-    letter-spacing: 0.6rem;
-    /* 자간 */
-    padding-top: 1rem;
-    /* 위쪽 패딩 */
-    padding-bottom: 1rem;
-    /*  아래쪽 패딩 */
+    margin: 0;
+    font-size: clamp(2rem, 4.6vw, 3.2rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
-h2 {
-    font-size: 1.5rem;
-    padding-bottom: 1em;
+.subtitle {
+    margin: 8px 0 0;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    font-weight: 400;
 }
 
 main {
+    margin-top: 24px;
     display: grid;
-    /* css grid 사용 */
-    grid-template-columns: 40% 60%;
-    /* 왼쪽 40%, 오른쪽 60% */
-    margin-top: 3rem;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: start;
 }
 
-header {
-    text-align: center;
-    margin: auto 2rem;
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 section {
-    margin: auto 1rem 4rem 2rem;
+    margin: 0;
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--paper);
+    box-shadow: var(--shadow-sm);
+    animation: slide-up 0.55s ease both;
 }
 
-p {
-    margin: 0.2rem auto;
+#mainLeft section:nth-of-type(1) {
+    animation-delay: 0.04s;
+}
+
+#mainLeft section:nth-of-type(2) {
+    animation-delay: 0.09s;
+}
+
+#mainLeft section:nth-of-type(3) {
+    animation-delay: 0.14s;
+}
+
+#mainRight section:nth-of-type(1) {
+    animation-delay: 0.06s;
+}
+
+#mainRight section:nth-of-type(2) {
+    animation-delay: 0.11s;
+}
+
+#mainRight section:nth-of-type(3) {
+    animation-delay: 0.16s;
+}
+
+#mainRight section:nth-of-type(4) {
+    animation-delay: 0.21s;
+}
+
+#mainRight section:nth-of-type(5) {
+    animation-delay: 0.26s;
+}
+
+h2 {
+    margin: 0 0 12px;
+    font-size: 0.84rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+p,
+li {
+    margin: 0 0 8px;
+}
+
+p:last-child,
+li:last-child {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--link);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+    color: #084866;
+    border-bottom-color: transparent;
+}
+
+i {
+    width: 16px;
+    margin-right: 0.45rem;
+    color: var(--accent);
+}
+
+#mainLeft section:first-child p {
+    display: flex;
+    align-items: center;
 }
 
 .profile-photo {
-    width: 130px;
-    margin: 0 0 1rem 0;
+    width: 106px;
+    margin: 2px 0 14px;
 }
 
 .profile-photo img {
     width: 100%;
     display: block;
     border-radius: 12px;
-    border: 1px solid lightgray;
+    border: 2px solid var(--accent-soft);
+    box-shadow: 0 8px 18px rgba(15, 118, 110, 0.2);
 }
 
-hr {
-    border: none;
-    background-color: lightgray;
-    height: 1px;
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-h1,
-h2 {
-    font-weight: 100;
-    margin-bottom: 0;
+@media (max-width: 920px) {
+    body {
+        padding: 24px 12px 36px;
+    }
+
+    #header {
+        padding: 22px 20px;
+    }
+
+    main {
+        margin-top: 16px;
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    article {
+        gap: 14px;
+    }
 }
 
-i {
-    margin-right: 0.5rem;
-    /* SNS 아이콘 오른쪽 여백 */
+@media (max-width: 560px) {
+    h1 {
+        letter-spacing: 0.06em;
+    }
+
+    .subtitle {
+        letter-spacing: 0.04em;
+    }
+
+    section {
+        padding: 16px 14px;
+    }
+
+    .profile-photo {
+        width: 92px;
+    }
+
+    h2 {
+        letter-spacing: 0.12em;
+    }
 }
 
-#mainLeft {
-    border-right: 1px solid lightgray;
+@media (prefers-reduced-motion: reduce) {
+    section {
+        animation: none;
+    }
+
+    a {
+        transition: none;
+    }
 }
