@@ -48,6 +48,18 @@ p {
     margin: 0.2rem auto;
 }
 
+.profile-photo {
+    width: 180px;
+    margin: 0 0 1rem 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+}
+
 hr {
     border: none;
     background-color: lightgray;
