@@ -295,6 +295,26 @@ i {
     border-bottom: none;
 }
 
+.patent-item {
+    margin-top: 8px;
+}
+
+.patent-title {
+    margin: 0 0 4px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.patent-meta {
+    margin: 0 0 4px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.patent-meta:last-child {
+    margin-bottom: 0;
+}
+
 .profile-photo {
     width: 98px;
     margin: 2px 0 13px;
