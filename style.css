@@ -295,6 +295,10 @@ i {
     border-bottom: none;
 }
 
+.inline-doc-btn {
+    margin-left: 4px;
+}
+
 .patent-item {
     margin-top: 8px;
 }
