@@ -144,6 +144,20 @@ i {
     color: #424f66;
 }
 
+.contact-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+    color: #424f66;
+}
+
+.contact-inline span {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
 .profile-photo {
     width: 90px;
     margin: 2px 0 12px;
@@ -259,6 +273,86 @@ th {
     background: var(--table-head);
     color: #ffffff;
     font-weight: 600;
+}
+
+@page {
+    size: A4;
+    margin: 10mm;
+}
+
+@media print {
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff !important;
+    }
+
+    body {
+        min-height: auto;
+        font-size: 12px;
+        line-height: 1.45;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    #header,
+    main {
+        width: 100% !important;
+        margin: 0 !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    #header {
+        padding: 0 0 4mm !important;
+        border-top: none !important;
+    }
+
+    main {
+        grid-template-columns: 32% 68%;
+        border-bottom: none !important;
+    }
+
+    article {
+        padding: 0 !important;
+    }
+
+    #mainLeft {
+        border-right: 1px solid var(--rule) !important;
+        border-bottom: none !important;
+        padding-right: 4mm !important;
+    }
+
+    #mainRight {
+        padding-left: 3mm !important;
+    }
+
+    section {
+        margin: 0 0 3.2mm !important;
+        padding: 0 0 2.4mm !important;
+        break-inside: avoid;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        margin-top: 6px;
+        font-size: 11px;
+    }
+
+    .profile-photo {
+        width: 68px !important;
+        margin-bottom: 8px !important;
+    }
+
+    ul {
+        padding-left: 1rem;
+    }
 }
 
 @media (max-width: 920px) {
