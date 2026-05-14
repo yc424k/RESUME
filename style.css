@@ -171,11 +171,13 @@ i {
 }
 
 .personal-value a {
+    color: #364866;
     text-decoration: none;
     text-decoration-color: transparent;
 }
 
 .personal-value a:hover {
+    color: #364866;
     text-decoration: none;
     text-decoration-color: transparent;
 }
