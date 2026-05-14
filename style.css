@@ -202,9 +202,17 @@ i {
     margin-top: 10px;
 }
 
+.featured-paper {
+    font-weight: 700;
+}
+
+.featured-award {
+    font-weight: 700;
+}
+
 .thesis-title {
     margin: 0 0 4px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .thesis-meta {
