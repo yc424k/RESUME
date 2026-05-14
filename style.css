@@ -144,20 +144,6 @@ i {
     color: #424f66;
 }
 
-.contact-inline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px 14px;
-    color: #424f66;
-}
-
-.contact-inline span {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-}
-
 .profile-photo {
     width: 90px;
     margin: 2px 0 12px;
