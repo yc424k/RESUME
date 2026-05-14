@@ -47,6 +47,7 @@ main {
     padding: 34px 44px 24px;
     border-top: 1px solid var(--rule);
     border-radius: 16px 16px 0 0;
+    text-align: center;
 }
 
 h1 {
@@ -138,15 +139,26 @@ i {
     color: var(--accent);
 }
 
-#mainLeft section:first-child p {
+.personal-name {
+    margin: 0 0 8px;
+    font-size: 1.26rem;
+    font-weight: 700;
+    color: var(--section-head);
+}
+
+.personal-line {
     display: flex;
     align-items: center;
     color: #424f66;
 }
 
 .profile-photo {
-    width: 90px;
+    width: 120px;
     margin: 2px 0 12px;
+}
+
+.personal-address {
+    align-items: flex-start;
 }
 
 .profile-photo img {
@@ -326,9 +338,42 @@ th {
         font-size: 11px;
     }
 
+    #mainLeft section:first-child {
+        display: grid;
+        grid-template-columns: 92px 1fr;
+        column-gap: 3mm;
+        row-gap: 1.2mm;
+        align-items: start;
+    }
+
+    #mainLeft section:first-child h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 1.6mm;
+    }
+
     .profile-photo {
-        width: 68px !important;
+        width: 92px !important;
         margin-bottom: 8px !important;
+    }
+
+    #mainLeft section:first-child .profile-photo {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+        margin: 0 !important;
+    }
+
+    #mainLeft section:first-child p {
+        grid-column: 2;
+        margin: 0 0 1.2mm 0 !important;
+    }
+
+    #mainLeft section:first-child .personal-name {
+        font-size: 15px;
+        margin-bottom: 1.4mm !important;
+    }
+
+    #mainLeft section:first-child .personal-line:last-child {
+        margin-bottom: 0 !important;
     }
 
     ul {
