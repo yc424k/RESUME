@@ -156,46 +156,21 @@ i {
     border: 1px solid var(--rule);
 }
 
-.skill-group + .skill-group {
-    margin-top: 12px;
+.skill-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 8px;
 }
 
-.skill-group-title {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin: 0 0 7px;
-    font-size: 0.82rem;
+.skill-label {
+    min-width: 90px;
     font-weight: 600;
-    color: #4a5670;
+    color: var(--section-head);
 }
 
-.skill-group-title i {
-    width: auto;
-    margin-right: 0;
-}
-
-.skill-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
-.skill-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    background: var(--chip-bg);
-    font-size: 0.79rem;
+.skill-value {
     color: #31415d;
-}
-
-.skill-chip i {
-    width: auto;
-    margin-right: 0;
 }
 
 .thesis-item {
