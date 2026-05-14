@@ -185,6 +185,26 @@ i {
     font-weight: 700;
 }
 
+.project-item {
+    margin-top: 6px;
+}
+
+.project-title {
+    margin: 0 0 4px;
+    font-weight: 700;
+    color: var(--section-head);
+}
+
+.project-meta {
+    margin: 0 0 8px;
+    font-size: 0.86rem;
+    color: var(--muted);
+}
+
+.project-points {
+    margin: 0;
+}
+
 .thesis-title {
     margin: 0 0 4px;
     font-weight: 400;
