@@ -213,32 +213,6 @@ i {
     color: var(--muted);
 }
 
-.thesis-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
-.action-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4px 10px;
-    border-radius: 999px;
-    border: 1px solid var(--btn-border);
-    background: var(--btn-bg);
-    color: #294178;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 1.3;
-    text-decoration: none;
-}
-
-.action-btn:hover {
-    background: var(--btn-hover);
-    text-decoration: none;
-}
-
 .patent-item {
     margin-top: 7px;
 }
