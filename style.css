@@ -170,16 +170,14 @@ i {
     color: #364866;
 }
 
-.personal-value a {
-    color: #364866;
-    text-decoration: none;
-    text-decoration-color: transparent;
-}
-
-.personal-value a:hover {
-    color: #364866;
-    text-decoration: none;
-    text-decoration-color: transparent;
+.personal-section a,
+.personal-section a:link,
+.personal-section a:visited,
+.personal-section a:hover,
+.personal-section a:active {
+    color: #364866 !important;
+    text-decoration: none !important;
+    text-decoration-color: transparent !important;
 }
 
 .profile-photo {
